@@ -31,7 +31,7 @@ public class ArquillianListener implements StepListener {
 	 * and the currentClass instance, i.e. the Test class. This also means that the archive is not undeployed by Arquillian. 
 	 *   
 	 */
-	private static final ThreadLocal<TestRunnerAdaptor> adaptor = new ThreadLocal<TestRunnerAdaptor>();
+	protected static final ThreadLocal<TestRunnerAdaptor> adaptor = new ThreadLocal<TestRunnerAdaptor>();
 	
 	private static final ThreadLocal<Class<?>> currentClass = new ThreadLocal<Class<?>>();
 

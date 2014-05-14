@@ -1,10 +1,9 @@
 package com.mycompany.pages;
 
-import java.math.BigDecimal;
-
-import net.thucydides.core.annotations.DefaultUrl;
+import static org.jboss.arquillian.graphene.Graphene.waitGui;
 import net.thucydides.core.pages.PageObject;
 
+import org.jboss.arquillian.drone.api.annotation.Drone;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,6 +11,8 @@ import org.openqa.selenium.support.FindBy;
 
 //@DefaultUrl("http://localhost:8080/test/exchangeCurrencies.xhtml")
 public class ExchangeCurrenciesPage extends PageObject {
+    @Drone
+    WebDriver driver;
 
     @FindBy(id="inputForm:fromCurrency")
 	private WebElement fromCurrencyField;
@@ -30,6 +31,7 @@ public class ExchangeCurrenciesPage extends PageObject {
 	}
 
 	public void enter_amount_and_currencies(String amount, String fromCurrency, String toCurrency) {
+	    waitGui().until().element(amountField).is().visible();
         element(amountField).type(amount);
         element(fromCurrencyField).type(fromCurrency);
         element(toCurrencyField).type(toCurrency);

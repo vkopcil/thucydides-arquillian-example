@@ -16,6 +16,7 @@
         <thucydides.version>0.9.237</thucydides.version>
         <webdriver.driver>firefox</webdriver.driver>
         <arquillian.version>1.0.2.Final</arquillian.version>
+        <arquillian.graphene.version>2.0.2.Final</arquillian.graphene.version>
         <arquillian.jboss_managed_version>7.1.0.Final</arquillian.jboss_managed_version>
     </properties>
 
@@ -66,6 +67,14 @@
 			<groupId>org.jboss.as</groupId>
 			<artifactId>jboss-as-arquillian-container-managed</artifactId>
 			<version>${arquillian.jboss_managed_version}</version>
+		</dependency>
+
+		<!-- Arquillian Graphene extension -->
+		<dependency>
+			<groupId>org.jboss.arquillian.graphene</groupId>
+			<artifactId>arquillian-graphene</artifactId>
+			<version>${arquillian.graphene.version}</version>
+			<type>pom</type>
 		</dependency>
 
 		<!-- Java EE 6 APIs -->
