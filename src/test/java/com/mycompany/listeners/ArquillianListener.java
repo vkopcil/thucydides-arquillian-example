@@ -1,5 +1,6 @@
 package com.mycompany.listeners;
 
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -7,6 +8,7 @@ import org.jboss.arquillian.test.spi.LifecycleMethodExecutor;
 import org.jboss.arquillian.test.spi.TestRunnerAdaptor;
 import org.jboss.arquillian.test.spi.TestRunnerAdaptorBuilder;
 
+import net.thucydides.core.model.DataTable;
 import net.thucydides.core.model.Story;
 import net.thucydides.core.model.TestOutcome;
 import net.thucydides.core.steps.ExecutedStepDescription;
@@ -138,12 +140,6 @@ public class ArquillianListener implements StepListener {
     }
 
     @Override
-    public void stepIgnored(String arg0) {
-        // TODO Auto-generated method stub
-        
-    }
-
-    @Override
     public void stepPending(String arg0) {
         // TODO Auto-generated method stub
         
@@ -151,6 +147,36 @@ public class ArquillianListener implements StepListener {
 
     @Override
     public void testFailed(TestOutcome arg0, Throwable arg1) {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public void testRetried() {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public void useExamplesFrom(DataTable table) {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public void exampleStarted(Map<String, String> data) {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public void exampleFinished() {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public void assumptionViolated(String message) {
         // TODO Auto-generated method stub
         
     }

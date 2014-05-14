@@ -13,7 +13,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <thucydides.version>0.9.22</thucydides.version>
+        <thucydides.version>0.9.237</thucydides.version>
         <webdriver.driver>firefox</webdriver.driver>
         <arquillian.version>1.0.2.Final</arquillian.version>
         <arquillian.jboss_managed_version>7.1.0.Final</arquillian.jboss_managed_version>

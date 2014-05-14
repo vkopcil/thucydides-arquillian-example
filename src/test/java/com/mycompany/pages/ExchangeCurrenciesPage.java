@@ -10,7 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-@DefaultUrl("http://localhost:8080/test/exchangeCurrencies.xhtml")
+//@DefaultUrl("http://localhost:8080/test/exchangeCurrencies.xhtml")
 public class ExchangeCurrenciesPage extends PageObject {
 
     @FindBy(id="inputForm:fromCurrency")
