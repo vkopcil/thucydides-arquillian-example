@@ -11,21 +11,28 @@ import net.thucydides.core.pages.Pages;
 import net.thucydides.junit.runners.ThucydidesRunner;
 
 import org.jboss.arquillian.container.test.api.Deployment;
+import org.jboss.arquillian.drone.api.annotation.Drone;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
+import com.mycompany.listeners.ArquillianEnricher;
 import com.mycompany.requirements.Application;
 import com.mycompany.steps.EndUserSteps;
-import com.mycompany.web.model.ExchangeCurrenciesModel;
 
 @Story(Application.ExchangeCurrency.BuyForeignCurrency.class)
 @RunWith(ThucydidesRunner.class)
 public class ExchangeCurrenciesStoryTest {
-
+    @Rule
+    public ArquillianEnricher enricher = new ArquillianEnricher();
+    
+    @Drone
+    private WebDriver driver;
+    
     @Managed(uniqueSession = true)
     public WebDriver webdriver;
 
