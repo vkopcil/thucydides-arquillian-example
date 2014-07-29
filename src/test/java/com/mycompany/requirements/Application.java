@@ -8,4 +8,9 @@ public class Application {
         public class BuyForeignCurrency {}
         public class SellForeignCurrency {}
     }
+    
+    @Feature
+    public class StudentReport {
+        public class ListStudents {}
+    }
 }
